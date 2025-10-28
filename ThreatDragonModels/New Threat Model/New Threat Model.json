@@ -20,16 +20,37 @@
           {
             "position": {
               "x": 320,
-              "y": 65
+              "y": 275
             },
             "size": {
-              "width": 860,
-              "height": 440
+              "width": 880,
+              "height": 230
             },
             "visible": true,
             "shape": "trust-boundary-box",
             "zIndex": -1,
             "id": "66cadff1-1eb2-4fa1-8c6c-3d1d4f6136e7",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 319.9999999999993,
+              "y": 6.000000000003098
+            },
+            "size": {
+              "width": 880,
+              "height": 260
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "0fb44698-0f11-4043-85c5-7f5f255fe344",
+            "zIndex": -1,
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -208,8 +229,8 @@
           },
           {
             "position": {
-              "x": 810,
-              "y": 405
+              "x": 800,
+              "y": 390
             },
             "size": {
               "width": 90,
@@ -377,7 +398,7 @@
           {
             "position": {
               "x": 590,
-              "y": 153
+              "y": 96.0000000000031
             },
             "size": {
               "width": 90,
@@ -712,8 +733,8 @@
           },
           {
             "position": {
-              "x": 967,
-              "y": 335
+              "x": 997,
+              "y": 350
             },
             "size": {
               "width": 100,
@@ -881,7 +902,7 @@
           {
             "position": {
               "x": 757,
-              "y": 183
+              "y": 106.0000000000031
             },
             "size": {
               "width": 120,
@@ -1276,8 +1297,8 @@
             },
             "vertices": [
               {
-                "x": 920,
-                "y": 260
+                "x": 930,
+                "y": 190
               }
             ]
           },
@@ -1426,8 +1447,8 @@
           },
           {
             "position": {
-              "x": 957,
-              "y": 183
+              "x": 977,
+              "y": 106.0000000000031
             },
             "size": {
               "width": 120,
