@@ -36,13 +36,6 @@
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1340,6 +1333,98 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "1465fc12-2c78-4c7a-af45-0704455ca3f3",
+                  "title": "Credential theft via insecure connection",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "User credentials are intercepted when connecting to the web application through an unencrypted or compromised channel.",
+                  "mitigation": "Use HTTPS with HSTS and disable HTTP fallback.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 33,
+                  "score": "8"
+                },
+                {
+                  "id": "59215616-5b1a-4f9d-923b-039aded68ec4",
+                  "title": "Cross-site scripting (XSS) on login or input pages",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Malicious scripts injected into pages can steal user session tokens or data.",
+                  "mitigation": "Sanitize user inputs and apply Content Security Policy (CSP).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 34,
+                  "score": "7"
+                },
+                {
+                  "id": "1428268f-bbbc-4b4b-958e-51301f12bb35",
+                  "title": "Session fixation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "",
+                  "description": "Attackers force users to use a known session ID, which can later be hijacked.",
+                  "mitigation": "Regenerate session IDs after login and invalidate old sessions.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 35,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "d636ca2d-a554-44ed-9db3-1c437c64f82b",
+            "source": {
+              "cell": "8c4da146-be74-4139-8fca-fd4168143002",
+              "port": "ed38bc64-2323-4152-a2c0-d8ad4965e764"
+            },
+            "target": {
+              "cell": "5a3199ba-854d-4106-8927-92fe823c7a3c",
+              "port": "20ee2bb6-2393-41f3-a3dc-a96217df81e0"
+            },
+            "vertices": []
+          },
+          {
             "position": {
               "x": 957,
               "y": 183
@@ -1930,6 +2015,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 32
+    "threatTop": 35
   }
 }
