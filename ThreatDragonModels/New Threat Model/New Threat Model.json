@@ -1244,13 +1244,14 @@
             ],
             "id": "a1071443-b2f2-4b8d-bd28-9f06f1fec9fb",
             "source": {
-              "x": 280,
-              "y": 530
+              "cell": "8c4da146-be74-4139-8fca-fd4168143002",
+              "port": "ed38bc64-2323-4152-a2c0-d8ad4965e764"
             },
             "target": {
-              "x": 380,
-              "y": 630
-            }
+              "cell": "5a3199ba-854d-4106-8927-92fe823c7a3c",
+              "port": "20ee2bb6-2393-41f3-a3dc-a96217df81e0"
+            },
+            "vertices": []
           },
           {
             "position": {
@@ -1397,6 +1398,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1480,7 +1482,6 @@
               ]
             },
             "id": "8a03827a-7fbd-4933-94c0-8d13ad880055",
-            "zIndex": 12,
             "data": {
               "type": "tm.Actor",
               "name": "SERVICIOS \nBANCARIOS",
@@ -1815,7 +1816,7 @@
           },
           {
             "position": {
-              "x": 554,
+              "x": 578.75,
               "y": 555
             },
             "size": {
@@ -1834,6 +1835,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -1917,7 +1919,6 @@
               ]
             },
             "id": "5a3199ba-854d-4106-8927-92fe823c7a3c",
-            "zIndex": 14,
             "data": {
               "type": "tm.Actor",
               "name": "USUARIOS",
