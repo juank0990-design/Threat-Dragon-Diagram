@@ -36,6 +36,13 @@
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -892,11 +899,13 @@
                 "text": "DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -993,144 +1002,59 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
-            }
-          },
-          {
-            "position": {
-              "x": 900,
-              "y": -25
-            },
-            "size": {
-              "width": 120,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "BACKUP CLOUD"
-              },
-              "topLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              },
-              "bottomLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "store",
-            "zIndex": 7,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
+              "threats": [
+                {
+                  "id": "8419c16e-1757-4bc8-a2b8-96f46c5bdcdb",
+                  "title": "SQL Injection",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Unsanitized input from applications can allow attackers to execute arbitrary SQL commands.",
+                  "mitigation": "Use parameterized queries, ORM frameworks, and input validation to prevent injection.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": "10"
                 },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
+                {
+                  "id": "8b0a5c5a-519c-437f-a6c3-242eae8970e3",
+                  "title": "Weak or Default Database Credentials",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Default or weak passwords allow attackers to easily gain access to the database.",
+                  "mitigation": "Enforce strong password policies and disable default accounts.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "8"
                 },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
+                {
+                  "id": "ed048cab-ff57-4925-8cc8-19378978197e",
+                  "title": "Lack of Backup or Recovery Testing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Database may be unrecoverable after failure due to missing or untested backups.",
+                  "mitigation": "Implement regular automated backups and perform periodic restoration tests.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "7"
                 }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "c9d72e54-ffda-45bd-bbf1-8a79e5855bad"
-                },
-                {
-                  "group": "right",
-                  "id": "bda44457-90ed-4d7e-8133-dc1c6f57537a"
-                },
-                {
-                  "group": "bottom",
-                  "id": "246b1751-f53b-439d-be1c-c53d1b50402d"
-                },
-                {
-                  "group": "left",
-                  "id": "3da9ab90-5ae1-4671-9744-55cd536fd731"
-                }
-              ]
-            },
-            "id": "e0d1394c-2b80-4aea-a609-152e66a28942",
-            "data": {
-              "type": "tm.Store",
-              "name": "BACKUP CLOUD",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isALog": false,
-              "isEncrypted": false,
-              "isSigned": false,
-              "storesCredentials": false,
-              "storesInventory": false,
-              "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
               ],
-              "name": null
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 1
+              }
             }
           },
           {
@@ -1399,51 +1323,6 @@
             "labels": [
               "Data Flow"
             ],
-            "id": "cc600fba-4a6e-4e1f-9b70-3d60a7be81bf",
-            "source": {
-              "cell": "e0d1394c-2b80-4aea-a609-152e66a28942",
-              "port": "246b1751-f53b-439d-be1c-c53d1b50402d"
-            },
-            "target": {
-              "cell": "ca9aa385-7077-4edf-9086-08e0812c6175",
-              "port": "c9d72e54-ffda-45bd-bbf1-8a79e5855bad"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
             "id": "dbd4ad5c-2588-4a80-8898-a9761a5d3f32",
             "source": {
               "cell": "8c4da146-be74-4139-8fca-fd4168143002",
@@ -1461,52 +1340,6 @@
             ]
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "a1071443-b2f2-4b8d-bd28-9f06f1fec9fb",
-            "source": {
-              "cell": "8c4da146-be74-4139-8fca-fd4168143002",
-              "port": "ed38bc64-2323-4152-a2c0-d8ad4965e764"
-            },
-            "target": {
-              "cell": "5a3199ba-854d-4106-8927-92fe823c7a3c",
-              "port": "20ee2bb6-2393-41f3-a3dc-a96217df81e0"
-            },
-            "vertices": []
-          },
-          {
             "position": {
               "x": 957,
               "y": 183
@@ -1520,11 +1353,13 @@
                 "text": "BACKUP LOCAL"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1621,13 +1456,59 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "8c8e5ba5-f063-4110-8aa2-70d0470d771e",
+                  "title": "Unencrypted Backup Data",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Backup data stored locally without encryption can be accessed if physical or system compromise occurs.",
+                  "mitigation": "Encrypt all backups at rest and in transit; use strong encryption keys and secure storage.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "9"
+                },
+                {
+                  "id": "9497ba5c-7ae7-40e4-bbb6-3911b161a0b1",
+                  "title": "Backup Media Theft or Loss",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Physical backup drives or media can be stolen or lost, exposing sensitive data.",
+                  "mitigation": "Store backups in secure, access-controlled environments; maintain inventory logs; encrypt portable media.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "8"
+                },
+                {
+                  "id": "2cd30598-1d3b-4ae2-a85c-37054d080456",
+                  "title": "Unauthorized Access to Backup Files",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Lack of proper access control allows unauthorized users to view or modify backups.",
+                  "mitigation": "Apply least-privilege permissions; enforce role-based access; monitor file access logs.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1644,8 +1525,8 @@
                 "text": "SERVICIOS \nBANCARIOS"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1742,16 +1623,61 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "40f95361-2d6a-4a0f-a9cf-0954611a6c3b",
+                  "title": "Weak API Authentication",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "The system may accept requests without properly validating banking API credentials, allowing impersonation.",
+                  "mitigation": "Use strong token-based authentication (e.g., OAuth2, mTLS) and verify tokens on every request.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "9"
+                },
+                {
+                  "id": "c0b30ea6-7c0e-4731-af6e-1ac690a97c5f",
+                  "title": "Lack of Non-Repudiation for Banking Requests",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "The banking system could later deny sending specific API calls or transaction confirmations.",
+                  "mitigation": "Require signed requests and maintain tamper-proof logs with timestamps.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": "7"
+                },
+                {
+                  "id": "ebe09d5b-601d-43f4-ada8-8acc3e59e26f",
+                  "title": "Exposed API Keys Allow Bank Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "If API keys or certificates are leaked, attackers could impersonate the bank system.",
+                  "mitigation": "Store API keys securely in a vault and rotate them periodically.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "repudiation": 1
+              }
             }
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1772,12 +1698,57 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "aed1b7e5-9a7d-4204-b806-45aedc313900",
+                  "title": "Man-in-the-Middle attack",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker intercepts and modifies sensitive financial data exchanged between the bank system and internal servers.",
+                  "mitigation": "Use mutual TLS authentication and certificate pinning.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 30,
+                  "score": "8"
+                },
+                {
+                  "id": "f67b956c-6e8b-4b75-b23a-53f6acf3616c",
+                  "title": "Data exposure over unsecured API",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sensitive banking information is sent in plaintext or with weak encryption.",
+                  "mitigation": "Enforce HTTPS/TLS 1.3 and encrypt sensitive payloads.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": "7"
+                },
+                {
+                  "id": "25e64de6-e926-434e-b1f7-46a5972a0570",
+                  "title": "Replay attack on financial transactions",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "An attacker captures and resends valid banking transactions to manipulate account balances or duplicate operations.",
+                  "mitigation": "Implement nonce or timestamp validation on each request.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 32,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Data Flow"
@@ -1791,12 +1762,7 @@
               "cell": "8c4da146-be74-4139-8fca-fd4168143002",
               "port": "6259db11-3268-40d6-96ad-9d42388682eb"
             },
-            "vertices": [
-              {
-                "x": 370,
-                "y": 350
-              }
-            ]
+            "vertices": []
           },
           {
             "position": {
@@ -1812,8 +1778,8 @@
                 "text": "USUARIOS"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1910,9 +1876,53 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "213e90fb-00a3-449b-86be-cc5022f97a7b",
+                  "title": "User identity spoofing",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "An attacker may impersonate a legitimate user to gain unauthorized access to the system.",
+                  "mitigation": "Implement strong authentication (MFA) and session validation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": ""
+                },
+                {
+                  "id": "dcc24fbd-a8dd-4504-9580-cea41715987a",
+                  "title": "Stolen credentials reused",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Credentials leaked in previous breaches could be reused to impersonate a valid user.",
+                  "mitigation": "Enforce password rotation and monitor for breached credentials.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": "6"
+                },
+                {
+                  "id": "9c9d20fe-ffca-4a8f-9c0c-9acec6a235e3",
+                  "title": "Session hijacking",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Attackers may hijack an active user session to act as the user without credentials.",
+                  "mitigation": "Use secure cookies, enable HTTPS, and set short session lifetimes.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 3,
+                "repudiation": 0
+              }
             }
           }
         ]
@@ -1920,6 +1930,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 17
+    "threatTop": 32
   }
 }
